@@ -1,0 +1,24 @@
+﻿<Window x:Class="TextMate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextMate"
+        mc:Ignorable="d"
+        Title="TextMate2017" Height="350" Width="525">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Datei">
+                <MenuItem Header="_Neu" />
+                <MenuItem Header="_Öffnen" />
+                <MenuItem Header="_Speichern" />
+                <Separator />
+                <MenuItem Header="_Beenden" Click="MenuItem_Click" />
+            </MenuItem>
+            <RadioButton x:Name="rbFett" Content="F"/>
+            <RadioButton x:Name="rbKursiv" Content="K"/>
+            <RadioButton x:Name="rbUnterstrichen" Content="U"/>
+        </Menu>
+        <RichTextBox Name="rtbTexte" SpellCheck.IsEnabled="True" AllowDrop="True"></RichTextBox>
+    </DockPanel>
+</Window>
